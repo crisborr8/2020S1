@@ -1,0 +1,17 @@
+digraph G{
+labelloc = "t";
+label = ExpReg3;
+node [shape="circle", style=filled];
+rankdir = LR;
+graph [splines="true" forcelabels="true" pad="0.5,0.5" nodesep="0.5" overlap="false" bgcolor="white" ];
+S0 [color = darkolivegreen1];
+S0->S1[label="digito" color=cyan fontcolor=forestgreen fontsize=25];
+S1 [color = darkolivegreen1];
+S1->S2[label="." color=cyan fontcolor=forestgreen fontsize=25];
+S2 [color = darkolivegreen1];
+S2->S3[label="digito" color=cyan fontcolor=forestgreen fontsize=25];
+S3 [color = darkolivegreen1];
+S3->S3[label="digito" color=cyan fontcolor=forestgreen fontsize=25];
+S3 [shape="doublecircle", color=darkseagreen1];
+
+}

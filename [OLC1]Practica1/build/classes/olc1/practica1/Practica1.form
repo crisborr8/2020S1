@@ -55,11 +55,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Manual de usuario"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu_UsuarioActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menu_Tecnico">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Manual t&#xe9;cnico"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu_TecnicoActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -102,13 +108,9 @@
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                   <Component id="jScrollPane2" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jScrollPane1" min="-2" pref="304" max="-2" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="btn_Generar" min="-2" pref="140" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="btn_Analizar" min="-2" pref="130" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="jScrollPane1" pref="304" max="32767" attributes="0"/>
+                          <Component id="btn_Analizar" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane3" min="-2" pref="194" max="-2" attributes="0"/>
@@ -120,8 +122,8 @@
                               <Component id="btn_Siguiente" min="-2" pref="138" max="-2" attributes="0"/>
                           </Group>
                           <Component id="slide_Img" alignment="0" max="32767" attributes="0"/>
-                          <Component id="panel_Img" alignment="0" max="32767" attributes="0"/>
                           <Component id="cb_Img" max="32767" attributes="0"/>
+                          <Component id="lbl_img" min="-2" pref="325" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -136,24 +138,21 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="cb_Img" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="panel_Img" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="slide_Img" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_img" min="-2" pref="250" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="slide_Img" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btn_Anterior" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                           <Component id="btn_Siguiente" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="jScrollPane3" alignment="0" pref="353" max="32767" attributes="0"/>
+                  <Component id="jScrollPane3" alignment="0" pref="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jScrollPane1" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btn_Analizar" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="btn_Generar" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="btn_Analizar" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -199,14 +198,9 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btn_Generar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Generar automata"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="btn_Analizar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Analizar entradas"/>
+        <Property name="text" type="java.lang.String" value="Analizar entradas y generar automata"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_AnalizarActionPerformed"/>
@@ -234,8 +228,12 @@
     <Component class="javax.swing.JComboBox" name="cb_Img">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="1">
+          <StringArray count="5">
             <StringItem index="0" value="---&gt;Seleccione una imagen&lt;---"/>
+            <StringItem index="1" value="AFD"/>
+            <StringItem index="2" value="Arboles"/>
+            <StringItem index="3" value="Tabla de siguientes"/>
+            <StringItem index="4" value="Tabla de transiciones"/>
           </StringArray>
         </Property>
       </Properties>
@@ -247,35 +245,32 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Anterior"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_AnteriorActionPerformed"/>
+      </Events>
     </Component>
-    <Container class="javax.swing.JPanel" name="panel_Img">
-      <Properties>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder/>
-          </Border>
-        </Property>
-      </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-    </Container>
     <Component class="javax.swing.JSlider" name="slide_Img">
+      <Properties>
+        <Property name="maximum" type="int" value="200"/>
+        <Property name="minimum" type="int" value="1"/>
+        <Property name="minorTickSpacing" type="int" value="5"/>
+      </Properties>
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="slide_ImgStateChanged"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn_Siguiente">
       <Properties>
         <Property name="text" type="java.lang.String" value="Siguiente"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_SiguienteActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbl_img">
+      <Events>
+        <EventHandler event="mouseDragged" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="lbl_imgMouseDragged"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -1,0 +1,15 @@
+digraph G{
+labelloc = "t";
+label = RegEx2;
+node [shape="circle", style=filled];
+rankdir = LR;
+graph [splines="true" forcelabels="true" pad="0.5,0.5" nodesep="0.5" overlap="false" bgcolor="white" ];
+S0 [color = darkolivegreen1];
+S0->S1[label="digito" color=cyan fontcolor=forestgreen fontsize=25];
+S1 [color = darkolivegreen1];
+S1->S1[label="digito" color=cyan fontcolor=forestgreen fontsize=25];
+S1->S1[label="_" color=cyan fontcolor=forestgreen fontsize=25];
+S1->S1[label="letra" color=cyan fontcolor=forestgreen fontsize=25];
+S1 [shape="doublecircle", color=darkseagreen1];
+
+}

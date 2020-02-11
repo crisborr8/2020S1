@@ -1,0 +1,54 @@
+digraph G{
+labelloc = "t";
+label = ExpReg3;
+edge [arrowhead=none];
+node [shape=plaintext];
+P_1 [label=<
+<table border='0' cellspacing='5' cellborder='0' cellpadding='0'>
+<tr><td></td><td><font color='red' point-size='15'>N</font></td><td></td></tr>
+<tr><td><font color='blue' point-size='10'>1</font></td><td border='1' style='rounded' cellpadding='10'><font point-size='15'>.</font></td><td><font color='orange' point-size='10'>4</font></td></tr>
+<tr><td></td><td></td><td></td></tr></table>>];
+P_2 [label=<
+<table border='0' cellspacing='5' cellborder='0' cellpadding='0'>
+<tr><td></td><td><font color='red' point-size='15'>N</font></td><td></td></tr>
+<tr><td><font color='blue' point-size='10'>1</font></td><td border='1' style='rounded' cellpadding='10'><font point-size='15'>.</font></td><td><font color='orange' point-size='10'>3</font></td></tr>
+<tr><td></td><td></td><td></td></tr></table>>];
+P_1->P_2;
+H_1 [label=<
+<table border='0' cellspacing='5' cellborder='0' cellpadding='0'>
+<tr><td></td><td><font color='red' point-size='15'>N</font></td><td></td></tr>
+<tr><td><font color='blue' point-size='10'>1</font></td><td border='1' style='rounded' cellpadding='10'><font point-size='15'>digito</font></td><td><font color='orange' point-size='10'>1</font></td></tr>
+<tr><td></td><td><font color='blue' point-size='10'>1</font></td><td></td></tr></table>>];
+P_2->H_1;
+P_3 [label=<
+<table border='0' cellspacing='5' cellborder='0' cellpadding='0'>
+<tr><td></td><td><font color='red' point-size='15'>N</font></td><td></td></tr>
+<tr><td><font color='blue' point-size='10'>2</font></td><td border='1' style='rounded' cellpadding='10'><font point-size='15'>.</font></td><td><font color='orange' point-size='10'>3</font></td></tr>
+<tr><td></td><td></td><td></td></tr></table>>];
+P_2->P_3;
+H_2 [label=<
+<table border='0' cellspacing='5' cellborder='0' cellpadding='0'>
+<tr><td></td><td><font color='red' point-size='15'>N</font></td><td></td></tr>
+<tr><td><font color='blue' point-size='10'>2</font></td><td border='1' style='rounded' cellpadding='10'><font point-size='15'>.</font></td><td><font color='orange' point-size='10'>2</font></td></tr>
+<tr><td></td><td><font color='blue' point-size='10'>2</font></td><td></td></tr></table>>];
+P_3->H_2;
+P_4 [label=<
+<table border='0' cellspacing='5' cellborder='0' cellpadding='0'>
+<tr><td></td><td><font color='red' point-size='15'>N</font></td><td></td></tr>
+<tr><td><font color='blue' point-size='10'>3</font></td><td border='1' style='rounded' cellpadding='10'><font point-size='15'>+</font></td><td><font color='orange' point-size='10'>3</font></td></tr>
+<tr><td></td><td></td><td></td></tr></table>>];
+P_3->P_4;
+H_3 [label=<
+<table border='0' cellspacing='5' cellborder='0' cellpadding='0'>
+<tr><td></td><td><font color='red' point-size='15'>N</font></td><td></td></tr>
+<tr><td><font color='blue' point-size='10'>3</font></td><td border='1' style='rounded' cellpadding='10'><font point-size='15'>digito</font></td><td><font color='orange' point-size='10'>3</font></td></tr>
+<tr><td></td><td><font color='blue' point-size='10'>3</font></td><td></td></tr></table>>];
+P_4->H_3;
+H_4 [label=<
+<table border='0' cellspacing='5' cellborder='0' cellpadding='0'>
+<tr><td></td><td><font color='red' point-size='15'>N</font></td><td></td></tr>
+<tr><td><font color='blue' point-size='10'>4</font></td><td border='1' style='rounded' cellpadding='10'><font point-size='15'>#</font></td><td><font color='orange' point-size='10'>4</font></td></tr>
+<tr><td></td><td><font color='blue' point-size='10'>4</font></td><td></td></tr></table>>];
+P_1->H_4;
+
+}
