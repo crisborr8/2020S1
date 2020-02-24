@@ -1,15 +1,14 @@
 #ifndef RMDISK_H
 #define RMDISK_H
 
-#include <iostream>
-#include <fstream>
-
-using namespace std;
+#include "extras.h"
 
 class rmdisk
 {
 public:
-    void comandoRmdisk(string comandos);
+    bool comandoRmdisk(vector<string> c);
+private:
+    extras ext;
 };
 
 #endif // RMDISK_H
