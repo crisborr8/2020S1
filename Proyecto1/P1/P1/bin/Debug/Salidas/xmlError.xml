@@ -1,0 +1,12 @@
+<ListaErrores>
+<Error>
+  <Valor>/!hola</Valor>
+  <Fila>1</Fila>
+  <Columna>3</Columna>
+</Error>
+<Error>
+  <Valor>&#60;/hola</Valor>
+  <Fila>1</Fila>
+  <Columna>4</Columna>
+</Error>
+</ListaErrores>

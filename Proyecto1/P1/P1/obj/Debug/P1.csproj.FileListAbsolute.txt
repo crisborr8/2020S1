@@ -1,0 +1,10 @@
+K:\Users\crisb\Desktop\U\Compi\LAb\Proyecto1\P1\P1\bin\Debug\P1.exe.config
+K:\Users\crisb\Desktop\U\Compi\LAb\Proyecto1\P1\P1\bin\Debug\P1.exe
+K:\Users\crisb\Desktop\U\Compi\LAb\Proyecto1\P1\P1\bin\Debug\P1.pdb
+K:\Users\crisb\Desktop\U\Compi\LAb\Proyecto1\P1\P1\obj\Debug\P1.csprojAssemblyReference.cache
+K:\Users\crisb\Desktop\U\Compi\LAb\Proyecto1\P1\P1\obj\Debug\P1.Form1.resources
+K:\Users\crisb\Desktop\U\Compi\LAb\Proyecto1\P1\P1\obj\Debug\P1.Properties.Resources.resources
+K:\Users\crisb\Desktop\U\Compi\LAb\Proyecto1\P1\P1\obj\Debug\P1.csproj.GenerateResource.cache
+K:\Users\crisb\Desktop\U\Compi\LAb\Proyecto1\P1\P1\obj\Debug\P1.csproj.CoreCompileInputs.cache
+K:\Users\crisb\Desktop\U\Compi\LAb\Proyecto1\P1\P1\obj\Debug\P1.exe
+K:\Users\crisb\Desktop\U\Compi\LAb\Proyecto1\P1\P1\obj\Debug\P1.pdb

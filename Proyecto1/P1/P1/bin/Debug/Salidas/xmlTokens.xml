@@ -1,0 +1,20 @@
+<ListaTokens>
+<Token>
+  <Nombre>Comentario de linea</Nombre>
+  <Valor>//...</Valor>
+  <Fila>1</Fila>
+  <Columna>2</Columna>
+</Token>
+<Token>
+  <Nombre>Comentario multilinea (Inicio)</Nombre>
+  <Valor>&#60;!...</Valor>
+  <Fila>1</Fila>
+  <Columna>5</Columna>
+</Token>
+<Token>
+  <Nombre>Comentario multilinea (Fin)</Nombre>
+  <Valor>...!&#62;</Valor>
+  <Fila>5</Fila>
+  <Columna>8</Columna>
+</Token>
+</ListaTokens>
