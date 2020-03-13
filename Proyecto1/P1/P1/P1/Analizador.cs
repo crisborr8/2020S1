@@ -16,6 +16,7 @@ namespace P1
         public List<List<string>> vConjunto;
         public List<List<string>> vExpresion;
         public string pActual, repErrores, xmlErrores, xmlTokens;
+        public bool correcto;
 
         //**************************************************************************
         //**************************************************************************
@@ -296,7 +297,7 @@ namespace P1
                 pActual += getCharLS();
                 setToken("TOKEN COMILLAS INICIO");
                 colAct++;
-                while (getCharLC() != '\0')
+                while (getCharLC() != '\0' && filAct < texto.Length)
                 {
                     if (getCharLC() == '"')
                     {
@@ -385,6 +386,7 @@ namespace P1
         //XML Y REPORTE
         private void setErrores()
         {
+            correcto = false;
             while(getCharLC() != '\0' && getCharLC() != ' ')
             {
                 pActual += getCharLC();
@@ -484,6 +486,7 @@ namespace P1
         private void inicializarVariables(string t)
         {
             expresion = false;
+            correcto = true;
             colAct = filAct = 0;
             texto = t.Split('\n');
             pActual = "";
