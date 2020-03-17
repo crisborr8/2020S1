@@ -1,0 +1,27 @@
+digraph AFD{
+rankdir=LR;
+labelloc=t;
+label="er1";
+A -> B [label="{letra}"];
+B -> C [label="{letra}"];
+B -> D [label="{digito}"];
+B -> E [label="\"_\""];
+B -> F [label="ε"];
+C -> C [label="{letra}"];
+C -> D [label="{digito}"];
+C -> E [label="\"_\""];
+C -> F [label="ε"];
+D -> C [label="{letra}"];
+D -> D [label="{digito}"];
+D -> E [label="\"_\""];
+D -> F [label="ε"];
+E -> C [label="{letra}"];
+E -> D [label="{digito}"];
+E -> E [label="\"_\""];
+E -> F [label="ε"];
+F -> C [label="{letra}"];
+F -> D [label="{digito}"];
+F -> E [label="\"_\""];
+F -> F [label="ε"];
+F [shape=doublecircle];
+}

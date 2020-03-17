@@ -1,0 +1,14 @@
+digraph Siguientes{
+labelloc=t;
+label="er1";
+node [shape=plaintext];
+tabla [label=<<table>
+<tr><td>--</td><td>{letra}</td><td>{digito}</td><td>\"_\"</td><td>ε</td></tr>
+<tr><td>A</td><td>B</td><td>--</td><td>--</td><td>--</td></tr>
+<tr><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td></tr>
+<tr><td>C</td><td>C</td><td>D</td><td>E</td><td>F</td></tr>
+<tr><td>D</td><td>C</td><td>D</td><td>E</td><td>F</td></tr>
+<tr><td>E</td><td>C</td><td>D</td><td>E</td><td>F</td></tr>
+<tr><td>F</td><td>C</td><td>D</td><td>E</td><td>F</td></tr>
+</table>>];
+}

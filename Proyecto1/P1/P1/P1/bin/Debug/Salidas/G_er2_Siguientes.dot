@@ -1,0 +1,14 @@
+digraph Siguientes{
+labelloc=t;
+label="er2";
+node [shape=plaintext];
+tabla [label=<<table>
+<tr><td>--</td><td>\"c\"</td><td>\"a\"</td><td>ε</td><td>\"d\"</td><td>\"b\"</td></tr>
+<tr><td>A</td><td>B</td><td>C</td><td>D</td><td>--</td><td>--</td></tr>
+<tr><td>B</td><td>--</td><td>--</td><td>--</td><td>E</td><td>--</td></tr>
+<tr><td>C</td><td>--</td><td>--</td><td>--</td><td>--</td><td>F</td></tr>
+<tr><td>D</td><td>B</td><td>C</td><td>D</td><td>--</td><td>--</td></tr>
+<tr><td>E</td><td>B</td><td>C</td><td>D</td><td>--</td><td>--</td></tr>
+<tr><td>F</td><td>B</td><td>C</td><td>D</td><td>--</td><td>--</td></tr>
+</table>>];
+}

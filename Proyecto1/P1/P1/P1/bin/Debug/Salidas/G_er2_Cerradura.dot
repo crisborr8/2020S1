@@ -1,0 +1,27 @@
+digraph Cerradura{
+labelloc=t;
+label="er2";
+node [shape=plaintext];
+tabla [label=<<table>
+<tr><td>A - Cerradura (1)</td><td>2, 3, 4, 5, 6, 7, 11, 12, 16, 17, 18</td></tr>
+<tr><td>Ir (\"c\") - B</td><td>8</td></tr>
+<tr><td>Ir (\"a\") - C</td><td>13</td></tr>
+<tr><td>Ir (ε) - D</td><td>16</td></tr>
+<tr><td>B - Cerradura (8)</td><td>9</td></tr>
+<tr><td>Ir (\"d\") - E</td><td>10</td></tr>
+<tr><td>C - Cerradura (13)</td><td>14</td></tr>
+<tr><td>Ir (\"b\") - F</td><td>15</td></tr>
+<tr><td>D - Cerradura (16)</td><td>17, 18, 5, 6, 7, 11, 12</td></tr>
+<tr><td>Ir (ε) - D</td><td>16</td></tr>
+<tr><td>Ir (\"c\") - B</td><td>8</td></tr>
+<tr><td>Ir (\"a\") - C</td><td>13</td></tr>
+<tr><td>E - Cerradura (10)</td><td>16, 17, 18, 5, 6, 7, 11, 12</td></tr>
+<tr><td>Ir (ε) - D</td><td>16</td></tr>
+<tr><td>Ir (\"c\") - B</td><td>8</td></tr>
+<tr><td>Ir (\"a\") - C</td><td>13</td></tr>
+<tr><td>F - Cerradura (15)</td><td>16, 17, 18, 5, 6, 7, 11, 12</td></tr>
+<tr><td>Ir (ε) - D</td><td>16</td></tr>
+<tr><td>Ir (\"c\") - B</td><td>8</td></tr>
+<tr><td>Ir (\"a\") - C</td><td>13</td></tr>
+</table>>];
+}
