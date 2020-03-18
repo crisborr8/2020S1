@@ -1,28 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
+using System.Collections.Generic;
+using System.Drawing;
 
 namespace P1
 {
     public partial class Form1 : Form
     {
         Analizador a;
+        Generador g;
         string path, dir;
         RichTextBox rtbox;
+        int indexImg;
 
         public Form1()
         {
-            InitializeComponent();
             path = "";
+            indexImg = 0;
             a = new Analizador();
+            g = new Generador();
+            InitializeComponent();
             cbGrafica.SelectedIndex = 0;
             dir = Directory.GetCurrentDirectory() + "\\Salidas";
         }
@@ -55,6 +54,7 @@ namespace P1
                 rtbox.Text = sr.ReadToEnd();
                 string[] nombre = openFileDialog1.FileName.Split('\\');
                 pestañas.TabPages[pestañas.SelectedIndex].Text = nombre[nombre.Length - 1];
+                sr.Close();
             }
         }
 
@@ -78,7 +78,9 @@ namespace P1
                 {
                     rtbox = (RichTextBox)pestañas.TabPages[pestañas.SelectedIndex].Controls[0];
                     File.WriteAllText(saveFileDialog1.FileName, rtbox.Text);
+                    MessageBox.Show("ARCHIVO GUARDADO");
                 }
+                else MessageBox.Show("ERROR AL GUARDAR EL ARCHIVO");
             }
             else MessageBox.Show("NO EXISTEN PESTAÑAS A GUARDAR");
         }
@@ -90,6 +92,7 @@ namespace P1
             {
                 rtbox = (RichTextBox)pestañas.TabPages[pestañas.SelectedIndex].Controls[0];
                 File.WriteAllText(path, rtbox.Text);
+                MessageBox.Show("ARCHIVO GUARDADO");
             }
             else MessageBox.Show("NO EXISTEN PESTAÑAS A CERRAR");
         }
@@ -101,6 +104,8 @@ namespace P1
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+            cbGrafica.SelectedIndex = 0;
+            setImagen();
             if(pestañas.TabCount > 0)
             {
                 rtbox = (RichTextBox)pestañas.TabPages[pestañas.SelectedIndex].Controls[0];
@@ -108,22 +113,91 @@ namespace P1
                 else
                 {
                     a.Analizar(rtbox.Text);
-                    MessageBox.Show("ANALIZADO");
+                    MessageBox.Show("Empezando analisis...");
+                    if (a.correcto)
+                    {
+                        if (a.vExpReg.Count > 0)
+                        {
+                            g.setListas(a.vExpReg, a.vConjunto, a.vExpresion);
+                            g.Generar();
+                            txtConsola.Text = g.salida;
+                            indexImg = 0;
+                            setImagen();
+                            MessageBox.Show("ANALIZADO");
+                        }
+                        else txtConsola.Text = "ERROR NO EXISTEN EXPRESIONES REGULARES";
+                    }
+                    else txtConsola.Text = "ERROR EN LA SINTAXIS AL ANALIZAR";
                 }
             }
             else MessageBox.Show("NO EXISTEN PESTAÑAS A ANALIZAR");
         }
 
+        private void setImagen()
+        {
+            if(cbGrafica.SelectedIndex == 0)
+            {
+                imgGrafica.Image = new Bitmap(Directory.GetCurrentDirectory() + "/nada.png");
+                imgGrafica.SizeMode = PictureBoxSizeMode.CenterImage;
+            }
+            else if (g.pathAFD.Count != 0 && cbGrafica.SelectedIndex == 1)
+            {
+                if (indexImg > g.pathAFD.Count - 1) indexImg = 0;
+                else if (indexImg < 0) indexImg = g.pathAFD.Count - 1;
+                imgGrafica.Image = new Bitmap(g.pathAFD[indexImg] + ".png");
+                imgGrafica.SizeMode = PictureBoxSizeMode.CenterImage;
+            }
+            else if (g.pathAFN.Count != 0 && cbGrafica.SelectedIndex == 2)
+            {
+                if (indexImg > g.pathAFN.Count - 1) indexImg = 0;
+                else if (indexImg < 0) indexImg = g.pathAFN.Count - 1;
+                imgGrafica.Image = new Bitmap(g.pathAFN[indexImg] + ".png");
+                imgGrafica.SizeMode = PictureBoxSizeMode.CenterImage;
+            }
+            else if (g.pathSiguientes.Count != 0 && cbGrafica.SelectedIndex == 3)
+            {
+                if (indexImg > g.pathSiguientes.Count - 1) indexImg = 0;
+                else if (indexImg < 0) indexImg = g.pathSiguientes.Count - 1;
+                imgGrafica.Image = new Bitmap(g.pathSiguientes[indexImg] + ".png");
+                imgGrafica.SizeMode = PictureBoxSizeMode.CenterImage;
+            }
+            else if (g.pathCerradura.Count != 0 && cbGrafica.SelectedIndex == 4)
+            {
+                if (indexImg > g.pathCerradura.Count - 1) indexImg = 0;
+                else if (indexImg < 0) indexImg = g.pathCerradura.Count - 1;
+                imgGrafica.Image = new Bitmap(g.pathCerradura[indexImg] + ".png");
+                imgGrafica.SizeMode = PictureBoxSizeMode.CenterImage;
+            }
+        }
+
         private void errorLexico_Click(object sender, EventArgs e)
         {
-            File.WriteAllText(@dir + "\\Error.html", a.codigoError);
+            File.WriteAllText(@dir + "\\Error.html", a.repErrores);
             Process.Start(@dir + "\\Error.html");
         }
 
         private void guardarErrores_Click(object sender, EventArgs e)
         {
-            File.WriteAllText(@dir + "\\xmlError.xml", a.xmlError);
+            File.WriteAllText(@dir + "\\xmlError.xml", a.xmlErrores);
             Process.Start(@dir + "\\xmlError.xml");
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            indexImg--;
+            setImagen();
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            indexImg++;
+            setImagen();
+        }
+
+        private void cbGrafica_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            indexImg = 0;
+            setImagen();
         }
 
         private void guardarTokens_Click(object sender, EventArgs e)

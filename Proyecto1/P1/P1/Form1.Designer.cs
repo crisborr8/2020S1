@@ -150,14 +150,14 @@
             // guardarTokens
             // 
             this.guardarTokens.Name = "guardarTokens";
-            this.guardarTokens.Size = new System.Drawing.Size(180, 22);
+            this.guardarTokens.Size = new System.Drawing.Size(155, 22);
             this.guardarTokens.Text = "Guardar tokens";
             this.guardarTokens.Click += new System.EventHandler(this.guardarTokens_Click);
             // 
             // guardarErrores
             // 
             this.guardarErrores.Name = "guardarErrores";
-            this.guardarErrores.Size = new System.Drawing.Size(180, 22);
+            this.guardarErrores.Size = new System.Drawing.Size(155, 22);
             this.guardarErrores.Text = "Guardar errores";
             this.guardarErrores.Click += new System.EventHandler(this.guardarErrores_Click);
             // 
@@ -172,7 +172,7 @@
             // errorLexico
             // 
             this.errorLexico.Name = "errorLexico";
-            this.errorLexico.Size = new System.Drawing.Size(180, 22);
+            this.errorLexico.Size = new System.Drawing.Size(149, 22);
             this.errorLexico.Text = "Errores léxicos";
             this.errorLexico.Click += new System.EventHandler(this.errorLexico_Click);
             // 
@@ -207,7 +207,6 @@
             // txtConsola
             // 
             this.txtConsola.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtConsola.Enabled = false;
             this.txtConsola.Location = new System.Drawing.Point(8, 304);
             this.txtConsola.Name = "txtConsola";
             this.txtConsola.ReadOnly = true;
@@ -253,6 +252,7 @@
             this.btnAnterior.TabIndex = 6;
             this.btnAnterior.Text = "<---";
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnSiguiente
             // 
@@ -263,6 +263,7 @@
             this.btnSiguiente.TabIndex = 7;
             this.btnSiguiente.Text = "--->";
             this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // cbGrafica
             // 
@@ -271,11 +272,13 @@
             "Ver graficas...",
             "AFD",
             "AFND",
-            "Tabla de transiciones"});
+            "Tabla de transiciones",
+            "Tabla de cerraduras"});
             this.cbGrafica.Location = new System.Drawing.Point(659, 65);
             this.cbGrafica.Name = "cbGrafica";
             this.cbGrafica.Size = new System.Drawing.Size(202, 21);
             this.cbGrafica.TabIndex = 8;
+            this.cbGrafica.SelectedIndexChanged += new System.EventHandler(this.cbGrafica_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -328,6 +331,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proyecto 1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
