@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace P1
 {
@@ -11,6 +12,7 @@ namespace P1
         private string[] texto;
         private char[] textoLinea, c;
         private int colAct, colIni, filAct;
+        public int filER;
         private List<string> nuevo;
         public List<List<string>> vExpReg;
         public List<List<string>> vConjunto;
@@ -128,13 +130,37 @@ namespace P1
                     nuevo.Add(pActual);
                     if (32 <= getCharLC() && getCharLC() <= 125)
                     {
-                        pActual = getCharLC().ToString();
-                        colAct++;
-                        while (getCharLC() != ';')
+                        pActual = "";
+                        if (esNum(nuevo[2]))
                         {
+                            while (48 <= getCharLC() && getCharLC() <= 57)
+                            {
+                                pActual += getCharLC();
+                                colAct++;
+                                if (getCharLC() == '\0') return false;
+                                if (getCharLC() == ';') break;
+                                if (!(48 <= getCharLC() && getCharLC() <= 57))
+                                {
+                                    pActual = "";
+                                    break;
+                                }
+                            }
+                            if (pActual == "") return false;
+                        }
+                        else
+                        {
+                            if ((65 <= nuevo[2].ToCharArray()[0] && nuevo[2].ToCharArray()[0] <= 90)
+                                || (97 <= nuevo[2].ToCharArray()[0] && nuevo[2].ToCharArray()[0] <= 122))
+                            {
+                                if (!(65 <= getCharLC() && getCharLC() <= 90) && !(97 <= getCharLC() && getCharLC() <= 122))
+                                    return false;
+                            }
+                            else if ((65 <= getCharLC() && getCharLC() <= 90) || (97 <= getCharLC() && getCharLC() <= 122)
+                                    || (48 <= getCharLC() && getCharLC() <= 57))
+                                return false;
                             pActual += getCharLC();
                             colAct++;
-                            if (getCharLC() == '\0') return false;
+                            if (getCharLC() != ';') return false;
                         }
                         nuevo.Add(pActual);
                         return true;
@@ -146,7 +172,7 @@ namespace P1
                     colAct++;
                     nuevo.Add(",");
                     nuevo.Add(pActual);
-                    while(32 <= getCharLC() && getCharLC() <= 125)
+                    while (32 <= getCharLC() && getCharLC() <= 125)
                     {
                         if (getCharLC() == ';') return true;
                         pActual = getCharLC().ToString();
@@ -163,16 +189,21 @@ namespace P1
                     }
                     return false;
                 }
-                else
+                else if (getCharLC() == ';')
                 {
-                    colAct++;
-                    nuevo.Add(";");
+                    nuevo.Add("");
                     nuevo.Add(pActual);
-                    if (getCharLC() == ';') return true;
-                    else return false;
+                    return true;
                 }
+                else return false;
             }
             else return false;
+        }
+        private bool esNum(string s)
+        {
+            try { int n = int.Parse(s); }
+            catch (Exception e) { return false; }
+            return true;
         }
         //EXPRESIONES REGULARES
         private void ExpReg()
@@ -218,6 +249,7 @@ namespace P1
                         pActual = ";";
                         setToken("PUNTO Y COMA");
                         vExpresion.Add(nuevo);
+                        if (filER == -1) filER = filAct;
                         colAct++;
                     }
                     else setErrores();
@@ -281,11 +313,104 @@ namespace P1
                     pActual += getCharLC();
                     colAct++;
                 } while (getCharLC() != '"' && getCharLC() != '”');
-                nuevo.Add("\"" + pActual);
+                nuevo.Add("\''" + pActual);
                 pActual = "\"";
                 setToken("COMILLAS FIN");
                 colAct++;
                 return true;
+            }
+            else if(getCharLS() == '\\')
+            {
+                pActual = "\\";
+                colAct++;
+                if(getCharLC() == 'n')
+                {
+                    pActual += getCharLC();
+                    nuevo.Add(pActual);
+                    setToken("Salto de linea");
+                    colAct++;
+                    return true;
+                }
+                else if (getCharLC() == '\'')
+                {
+                    pActual += getCharLC();
+                    nuevo.Add("\\" + getCharLC());
+                    setToken("Comilla simple");
+                    colAct++;
+                    return true;
+                }
+                else if (getCharLC() == '"' || getCharLC() == '“' || getCharLC() == '”')
+                {
+                    pActual += getCharLC();
+                    nuevo.Add("\\" + pActual);
+                    setToken("Comilla doble");
+                    colAct++;
+                    return true;
+                }
+                else if (getCharLC() == 't')
+                {
+                    pActual += getCharLC();
+                    nuevo.Add(pActual);
+                    setToken("Tabulacion");
+                    colAct++;
+                    return true;
+                }
+                else
+                {
+                    setErrores();
+                    return false;
+                }
+            }
+            else if(getCharLS() == '[')
+            {
+                pActual = "[";
+                colAct++;
+                if (getCharLC() == ':')
+                {
+                    pActual += getCharLC();
+                    colAct++;
+                    if (getCharLC() == 't')
+                    {
+                        pActual += getCharLC();
+                        colAct++;
+                        if (getCharLC() == 'o')
+                        {
+                            pActual += getCharLC();
+                            colAct++;
+                            if (getCharLC() == 'd')
+                            {
+                                pActual += getCharLC();
+                                colAct++;
+                                if (getCharLC() == 'o')
+                                {
+                                    pActual += getCharLC();
+                                    colAct++;
+                                    if (getCharLC() == ':')
+                                    {
+                                        pActual += getCharLC();
+                                        colAct++;
+                                        if (getCharLC() == ']')
+                                        {
+                                            pActual += getCharLC();
+                                            nuevo.Add(pActual);
+                                            setToken("CONJUNTO TOTAL");
+                                            colAct++;
+                                            return true;
+                                        }
+                                        else setErrores();
+                                    }
+                                    else setErrores();
+                                }
+                                else setErrores();
+                            }
+                            else setErrores();
+                        }
+                        else setErrores();
+                    }
+                    else setErrores();
+                }
+                else setErrores();
+                return false;
             }
             else return false;
         }
@@ -297,24 +422,28 @@ namespace P1
                 pActual += getCharLS();
                 setToken("TOKEN COMILLAS INICIO");
                 colAct++;
-                while (getCharLC() != '\0' && filAct < texto.Length)
+                while(getChar() != '\0')
                 {
-                    if (getCharLC() == '"')
+                    while (getCharLC() != '\0' && filAct < texto.Length)
                     {
-                        colAct++;
-                        if (getCharLC() == ';')
+                        if (getCharLC() == '"')
                         {
-                            nuevo.Add(pActual);
-                            pActual = "\"";
-                            colAct--;
-                            setToken("TOKEN COMILLAS FIN");
                             colAct++;
-                            return true;
+                            if (getCharLC() == ';')
+                            {
+                                nuevo.Add(pActual);
+                                pActual = "\"";
+                                colAct--;
+                                setToken("TOKEN COMILLAS FIN");
+                                colAct++;
+                                return true;
+                            }
+                            else pActual += '"';
                         }
-                        else pActual += '"';
+                        pActual += getCharLC();
+                        colAct++;
                     }
-                    pActual += getCharLC();
-                    colAct++;
+                    pActual += "\n";
                 }
             }
             return false;
@@ -488,6 +617,7 @@ namespace P1
             expresion = false;
             correcto = true;
             colAct = filAct = 0;
+            filER = -1;
             texto = t.Split('\n');
             pActual = "";
             if (texto.Length != 0) textoLinea = texto[0].ToCharArray();
