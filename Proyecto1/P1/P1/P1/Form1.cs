@@ -113,16 +113,17 @@ namespace P1
                 else
                 {
                     a.Analizar(rtbox.Text);
-                    MessageBox.Show("ANALIZADO");
+                    MessageBox.Show("Empezando analisis...");
                     if (a.correcto)
                     {
                         if (a.vExpReg.Count > 0)
                         {
-                            g.setListas(a.vExpReg, a.vConjunto, a.vExpresion);
+                            g.setListas(a.vExpReg, a.vConjunto, a.vExpresion, a.filER);
                             g.Generar();
                             txtConsola.Text = g.salida;
                             indexImg = 0;
                             setImagen();
+                            MessageBox.Show("ANALIZADO");
                         }
                         else txtConsola.Text = "ERROR NO EXISTEN EXPRESIONES REGULARES";
                     }
@@ -177,7 +178,7 @@ namespace P1
 
         private void guardarErrores_Click(object sender, EventArgs e)
         {
-            File.WriteAllText(@dir + "\\xmlError.xml", a.xmlErrores);
+            File.WriteAllText(@dir + "\\xmlError.xml", g.xmlError);
             Process.Start(@dir + "\\xmlError.xml");
         }
 
@@ -201,7 +202,7 @@ namespace P1
 
         private void guardarTokens_Click(object sender, EventArgs e)
         {
-            File.WriteAllText(@dir + "\\xmlTokens.xml", a.xmlTokens);
+            File.WriteAllText(@dir + "\\xmlTokens.xml", g.xmlToken);
             Process.Start(@dir + "\\xmlTokens.xml");
         }
     }

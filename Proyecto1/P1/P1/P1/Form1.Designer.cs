@@ -189,6 +189,7 @@
             // 
             // richTextBox2
             // 
+            this.richTextBox2.AcceptsTab = true;
             this.richTextBox2.Location = new System.Drawing.Point(0, 0);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(574, 220);
