@@ -88,8 +88,8 @@
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\js-tablaVar.js">
       <PackagePath>js\js-tablaVar.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\main.js">
-      <PackagePath>js\main.js</PackagePath>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\js-analisis.js">
+      <PackagePath>js\js-analisis.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>

@@ -31,13 +31,13 @@
     <AppXManifest Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-03-31T19:27:24.810</Modified>
+      <Modified>2020-04-07T20:24:55.096</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\css\style-consSal2.css">
       <PackagePath>css\style-consSal2.css</PackagePath>
-      <Modified>2020-03-31T19:28:13.223</Modified>
+      <Modified>2020-04-07T18:39:37.372</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\css\style-div.css">
       <PackagePath>css\style-div.css</PackagePath>
@@ -53,11 +53,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\css\style-consSal1.css">
       <PackagePath>css\style-consSal1.css</PackagePath>
-      <Modified>2020-03-31T19:28:24.604</Modified>
+      <Modified>2020-04-07T18:21:27.067</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\css\style-tablaVar.css">
       <PackagePath>css\style-tablaVar.css</PackagePath>
-      <Modified>2020-04-07T18:06:35.473</Modified>
+      <Modified>2020-04-07T18:46:16.850</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\css\style.css">
       <PackagePath>css\style.css</PackagePath>
@@ -65,7 +65,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\index.html">
       <PackagePath>index.html</PackagePath>
-      <Modified>2020-04-07T18:03:21.893</Modified>
+      <Modified>2020-04-07T20:16:10.379</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\images\LockScreenLogo.scale-200.png">
       <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
@@ -107,23 +107,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\js-conSal2.js">
       <PackagePath>js\js-conSal2.js</PackagePath>
-      <Modified>2020-01-12T08:26:01.995</Modified>
+      <Modified>2020-04-07T18:35:58.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\js-tab.js">
       <PackagePath>js\js-tab.js</PackagePath>
-      <Modified>2020-03-31T23:15:59.201</Modified>
+      <Modified>2020-04-07T20:14:12.178</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\js-tablaVar.js">
       <PackagePath>js\js-tablaVar.js</PackagePath>
       <Modified>2020-04-07T18:03:51.459</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\main.js">
-      <PackagePath>js\main.js</PackagePath>
-      <Modified>2020-03-31T18:10:08.577</Modified>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\js-analisis.js">
+      <PackagePath>js\js-analisis.js</PackagePath>
+      <Modified>2020-04-07T20:19:14.447</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-03-31T19:27:24.415</Modified>
+      <Modified>2020-04-07T20:24:54.286</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
