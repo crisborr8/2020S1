@@ -1,0 +1,52 @@
+﻿.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.opcion {
+    float: left;
+    overflow: hidden;
+}
+
+.opcion .btn-opcion {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 10px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .opcion:hover .btn-opcion {
+    background-color: dimgray;
+}
+
+.opcion-content {
+    margin-top: 1px;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: 0.7%;
+}
+
+.opcion-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.opcion-content a:hover {
+    background-color: dimgray;
+}
+
+.opcion:hover .opcion-content {
+    display: block;
+}

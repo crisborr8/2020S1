@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>CRISSPC</Machine>
+    <WindowsUser>crisb</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>c3313224-1b92-4d07-9339-dec797497cf3</PackageIdentityName>
+    <PackageIdentityPublisher>CN=crisb</PackageIdentityPublisher>
+    <IntermediateOutputPath>K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\bld\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType></RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath></WindowsSdkPath>
+    <LayoutDir>K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\bin\Debug\AppX</LayoutDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\css\style-consSal2.css">
+      <PackagePath>css\style-consSal2.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\css\style-div.css">
+      <PackagePath>css\style-div.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\css\style-header.css">
+      <PackagePath>css\style-header.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\css\style-tab.css">
+      <PackagePath>css\style-tab.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\css\style-consSal1.css">
+      <PackagePath>css\style-consSal1.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\css\style-tablaVar.css">
+      <PackagePath>css\style-tablaVar.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\css\style.css">
+      <PackagePath>css\style.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\index.html">
+      <PackagePath>index.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\images\LockScreenLogo.scale-200.png">
+      <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\images\SplashScreen.scale-200.png">
+      <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\images\Square150x150Logo.scale-200.png">
+      <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\images\Square44x44Logo.scale-200.png">
+      <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\images\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\images\StoreLogo.png">
+      <PackagePath>images\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\images\Wide310x150Logo.scale-200.png">
+      <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\js-conSal1.js">
+      <PackagePath>js\js-conSal1.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\js-conSal2.js">
+      <PackagePath>js\js-conSal2.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\js-tab.js">
+      <PackagePath>js\js-tab.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\js-tablaVar.js">
+      <PackagePath>js\js-tablaVar.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\main.js">
+      <PackagePath>js\main.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\bin\Debug\ReverseMap\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

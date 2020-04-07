@@ -1,0 +1,11 @@
+﻿#consola-salida-2 {
+    height: 285px;
+    width: 100%;
+    overflow: auto;
+}
+
+#consola-salida-2-content {
+    height: 800px;
+    width: 2000px;
+    background-color: coral;
+}

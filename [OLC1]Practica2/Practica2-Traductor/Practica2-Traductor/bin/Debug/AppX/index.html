@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>Practica2_Traductor</title>
+    <link href="css/style-header.css" rel="stylesheet" />
+    <link href="css/style-div.css" rel="stylesheet" />
+    <link href="css/style-tab.css" rel="stylesheet" />
+    <link href="css/style-tablaVar.css" rel="stylesheet" />
+    <link href="css/style-consSal1.css" rel="stylesheet" />
+    <link href="css/style-consSal2.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="opcion">
+                <button class="btn-opcion">
+                    Archivo
+                </button>
+                <div class="opcion-content">
+                    <a href="#" onclick="crearPagina('Nueva Pestaña ', -1)">Nuevo</a>
+                    <a href="#" onclick="document.getElementById('abrir').click()">Abrir</a>
+                    <input type="file" id="abrir" onchange="abrir()" hidden>
+                    <a href="#">Guardar</a>
+                    <a href="#" onclick="guardarC()">Guardar Como</a>
+                    <a href="#">Salir</a>
+                </div>
+            </div>
+            <div class="opcion">
+                <button class="btn-opcion">
+                    Analizar
+                </button>
+                <div class="opcion-content">
+                    <a href="#">Convertir y analizar</a>
+                </div>
+            </div>
+            <div class="opcion">
+                <button class="btn-opcion">
+                    Reportes
+                </button>
+                <div class="opcion-content">
+                    <a href="#">Salida html</a>
+                    <a href="#">Salida phyton</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="contenido">
+        <div id="col-1">
+            <div id="ventanas">
+                <div id="botones">
+                    <button class="tablink" onclick="openPage('Nueva Pestaña 1', this)" id="defaultOpen">Nueva Pestaña 1</button>
+                </div>
+                <div id="contenido-botones">
+                    <div id="Nueva Pestaña 1" class="tabcontent">
+                        <textarea class="textoCodigo" id="txt_Nueva Pestaña 1" rows="20" cols="110"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="tabla-variables">
+                <div id="tabla-variables-content">
+                    <div style="overflow-x:auto;">
+                        <table>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Tipo</th>
+                                <th>Linea</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="col-2">
+            <div id="consola-salida-1">
+                <div id="consola-salida-1-content">Scroll inside me!</div>
+            </div>
+            <div id="consola-salida-2">
+                <div id="consola-salida-2-content">Scroll inside me!</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/js-tablaVar.js"></script>
+    <script src="js/js-conSal1.js"></script>
+    <script src="js/js-conSal2.js"></script>
+    <script src="js/js-tab.js"></script>
+</body>
+</html>
