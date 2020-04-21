@@ -86,4 +86,10 @@ function openPage(elmnt) {
     pestAct = pageName;
 }
 
+function repLexSin() {
+    alert(repErrores);
+    document.getElementById("reportesLexSin").innerHTML = repErrores;
+    alert(repErrores);
+}
+
 document.getElementById("defaultOpen").click();

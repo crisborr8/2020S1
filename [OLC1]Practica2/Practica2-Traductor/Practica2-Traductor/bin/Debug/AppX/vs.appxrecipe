@@ -31,7 +31,7 @@
     <AppXManifest Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-07T20:24:55.096</Modified>
+      <Modified>2020-04-21T05:46:08.097</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -65,7 +65,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\index.html">
       <PackagePath>index.html</PackagePath>
-      <Modified>2020-04-07T20:16:10.379</Modified>
+      <Modified>2020-04-20T19:44:54.197</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\repLexSin.html">
+      <PackagePath>repLexSin.html</PackagePath>
+      <Modified>2020-04-20T21:34:40.038</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\images\LockScreenLogo.scale-200.png">
       <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
@@ -111,7 +115,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\js-tab.js">
       <PackagePath>js\js-tab.js</PackagePath>
-      <Modified>2020-04-07T20:14:12.178</Modified>
+      <Modified>2020-04-20T20:29:14.843</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\js-tablaRep.js">
+      <PackagePath>js\js-tablaRep.js</PackagePath>
+      <Modified>2020-01-12T08:26:01.995</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\js-tablaVar.js">
       <PackagePath>js\js-tablaVar.js</PackagePath>
@@ -119,11 +127,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\js\js-analisis.js">
       <PackagePath>js\js-analisis.js</PackagePath>
-      <Modified>2020-04-07T20:19:14.447</Modified>
+      <Modified>2020-04-21T05:43:34.588</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\Users\crisb\Desktop\U\Compi\LAb\[OLC1]Practica2\Practica2-Traductor\Practica2-Traductor\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-04-07T20:24:54.286</Modified>
+      <Modified>2020-04-21T05:46:03.031</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

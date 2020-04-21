@@ -11,7 +11,7 @@
     <link href="css/style-consSal1.css" rel="stylesheet" />
     <link href="css/style-consSal2.css" rel="stylesheet" />
 </head>
-<body>
+<body style="background-color: #acb1a7;">
     <header>
         <div class="navbar">
             <div class="opcion">
@@ -32,12 +32,20 @@
                     Analizar
                 </button>
                 <div class="opcion-content">
-                    <a href="#" onclick="analizar(this)">Convertir y analizar</a>
+                    <a href="#" onclick="analizar()">Convertir y analizar</a>
                 </div>
             </div>
             <div class="opcion">
                 <button class="btn-opcion">
                     Reportes
+                </button>
+                <div class="opcion-content">
+                    <a href="repLexSin.html" target="_blank" onclick="repLexSin()">Lexicos y Sintacticos</a>
+                </div>
+            </div>
+            <div class="opcion">
+                <button class="btn-opcion">
+                    Salidas
                 </button>
                 <div class="opcion-content">
                     <a href="#">Salida html</a>
@@ -75,7 +83,7 @@
         <div id="col-2">
             <div id="consola-salida-1">
                 <div id="consola-salida-1-content">
-                    <textarea rows="17" cols="110" disabled></textarea>
+                    <textarea rows="17" cols="110" disabled id="txt_Salida"></textarea>
                 </div>
             </div>
             <div id="consola-salida-2">
